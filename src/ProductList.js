@@ -5,13 +5,11 @@ const axios = require("axios").default;
 // import defaultImage require('./img/defaultImage.jpg')
 
 const ProductList = () => {
-  // const {cart, setCart} =  useContext(Cart);
-  console.log(useContext(Cart));
   const [products, setproducts] = useState([]);
   const [filterdProdList, setFilterdProdList] = useState([])
   const [categories, setCategories] = useState()
   const [selectedCategory, setSelectedCategory] = useState()
-  const {cart} =  useContext(Cart);
+  const {cart, setCart} =  useContext(Cart);
 
   useEffect(() => {
       axios.get(`https://dummyjson.com/products/categories`)
